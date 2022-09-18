@@ -1,0 +1,54 @@
+Maximum Frequency Number
+
+'''
+    Time Complexity: O(N ^ 2)
+    Space Complexity: O(1)
+
+    Where N is the total number of elements in the array.
+'''
+
+
+def maximumFrequency(arr, n):
+    #n-- Size of list/array
+    # Declare 4 variables as 'maxFrequency', 'currentFrequency', 'maxElement', 'currentElement' and initialize them with 0
+    maxFrequency = 0
+    maxElement = 0
+    currentElement = 0
+    currentFrequency = 0
+
+    for i in range(n):
+        
+        # Set currentElement as arr[i] and currentFrequency to 0
+        currentElement = arr[i]
+        currentFrequency = 0
+        
+        # Loop to calculate the frequency of the currentElement
+
+        for j in range(i, n):
+            if(currentElement == arr[j]):
+                currentFrequency += 1
+                
+        # If our currentFrequency is greater than maxFrequency
+        if(currentFrequency > maxFrequency):
+            
+            # Update maxFrequency and 'maxElement' with 'currentFrequency' and 'currentFrequency' respectively.
+            maxFrequency = currentFrequency
+            maxElement = currentElement
+            
+    return maxElement
+
+
+
+Test Case Input
+3
+13
+2 12 2 11 -12 2 -1 2 2 11 12 2 -6
+3
+4 -5 1
+4
+1 -2 1 -2
+
+Desired Output
+2
+4
+1
