@@ -7,3 +7,4 @@ def toStr(n,base):
 
 print(toStr(1453,16))
 
+https://runestone.academy/ns/books/published/pythonds/Recursion/pythondsConvertinganIntegertoaStringinAnyBase.html
